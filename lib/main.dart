@@ -29,8 +29,8 @@ class HomeScreen extends StatelessWidget {
         children: [
           HeaderWidget(title: "SRI LANKA NIC DECORDER"),
           SizedBox(height: 20),
-          Image.network(
-            'https://atlas-content-cdn.pixelsquid.com/stock-images/sri-lanka-desk-flag-XlEQWJ5-600.jpg',
+          Image.asset(
+            'lib/assets/HomeScreenImg.png',
             height: 250,
           ),
           SizedBox(height: 20),
