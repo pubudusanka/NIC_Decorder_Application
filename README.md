@@ -37,6 +37,8 @@ flutter run
 
 ## 📸 Screenshots
 
+![HomeScreen](screenshot/HomeScreen.png)
+![ResultScreen](screenshot/ResultScreen.png)
 ## 🤝 Contributing
 
 We welcome contributions from the community! If you'd like to contribute to this project:
