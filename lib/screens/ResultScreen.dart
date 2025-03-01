@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nic_decorder_application/controller/NicController.dart';
 
+import '../DetailField.dart';
+
 class ResultScreen extends StatelessWidget {
   final NicController nicController = Get.find();
 
