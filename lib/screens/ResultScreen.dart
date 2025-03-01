@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../DetailRow.dart';
 import '../controller/NicController.dart';
-import '../widgets/custom_header.dart';
+import '../widgets/HeaderWidget.dart';
 
 class ResultScreen extends StatelessWidget {
   final NicController nicController = Get.find();
@@ -11,38 +12,33 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomHeader(title: "Details Belongs to the NIC"),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                buildInfoRow("Birth Year", nicController.birthYear.value),
-                buildInfoRow("Birth Date", nicController.birthDate.value),
-                buildInfoRow("Week Day", nicController.birthDay.value),
-                buildInfoRow("Age", nicController.age.value),
-                buildInfoRow("Gender", nicController.gender.value),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () => Get.back(),
-                  child: Text("Back to Main"),
-                )
-              ],
+          HeaderWidget(title: "Details Belongs to the NIC"),
+          SizedBox(height: 20),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/e/e6/Sri_Lanka_Flag_Lion.png',
+                    height: 100,
+                  ),
+                  SizedBox(height: 20),
+                  DetailRow(title: "Birth Year", value: nicController.birthYear.value),
+                  DetailRow(title: "Birth Date", value: nicController.birthDate.value),
+                  DetailRow(title: "Week Day", value: nicController.birthDay.value),
+                  DetailRow(title: "Age", value: nicController.age.value),
+                  DetailRow(title: "Gender", value: nicController.gender.value),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () => Get.back(),
+                    child: Text("Back to Main"),
+                  ),
+                ],
+              ),
             ),
           ),
-        ],
-      ),
-    );
-  }
-
-  Widget buildInfoRow(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
-          Text(value),
         ],
       ),
     );
