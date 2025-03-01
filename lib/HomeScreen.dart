@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nic_decorder_application/controller/NicController.dart';
 
 class HomeScreen extends StatelessWidget {
-  final NICController nicController = Get.put(NICController());
+  final NicController nicController = Get.put(NicController());
   final TextEditingController nicInputController = TextEditingController();
 
   @override
