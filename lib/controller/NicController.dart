@@ -44,11 +44,11 @@ class NicController extends GetxController {
   }
 
   void _processNICData(String year, int days) {
-    // Gender check: if days > 500, it's female (subtract 500)
+    // Find gender
     String genderText = (days > 500) ? "Female" : "Male";
     if (days > 500) days -= 500;
 
-    // Convert day of the year to actual date
+    // Convert date of the week
     DateTime dob = DateTime(int.parse(year), 1, 1).add(Duration(days: days - 1));
     String formattedDate = DateFormat("yyyy-MM-dd").format(dob);
     String weekDay = DateFormat("EEEE").format(dob);
