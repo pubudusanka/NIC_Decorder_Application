@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'nic_controller.dart';
+import 'controller/nic_controller.dart';
 
 void main() {
   runApp(MyApp());
