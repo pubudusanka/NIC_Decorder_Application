@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/NicController.dart';
+import 'screens/HomeScreen.dart';
 
 void main() {
   runApp(MyApp());
