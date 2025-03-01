@@ -20,9 +20,9 @@ class ResultScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/e/e6/Sri_Lanka_Flag_Lion.png',
-                    height: 100,
+                  Image.asset(
+                    'lib/assets/ResultScreenImg.png',
+                    height: 150,
                   ),
                   SizedBox(height: 20),
                   DetailRow(title: "Birth Year", value: nicController.birthYear.value),
