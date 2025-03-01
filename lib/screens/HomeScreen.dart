@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/NicController.dart';
-import '../widgets/custom_header.dart';
+import '../widgets/HeaderWidget.dart';
 import 'ResultScreen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomHeader(title: "SRI LANKA NIC DECORDER"),
+          HeaderWidget(title: "SRI LANKA NIC DECORDER"),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
