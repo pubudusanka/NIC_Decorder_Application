@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 20),
           Image.network(
             'https://atlas-content-cdn.pixelsquid.com/stock-images/sri-lanka-desk-flag-XlEQWJ5-600.jpg',
-            height: 150,
+            height: 250,
           ),
           SizedBox(height: 20),
           Padding(
